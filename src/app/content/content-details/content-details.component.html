@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top"><img src="../../assets/Images/logo.png" alt="..." /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ms-1"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <li class="nav-item">
+            <button (click)="LogOut()" class="btn btn-outline-primary btn-lg">Logout</button>
+          </li>
+          <!-- <li class="nav-item" (click)="scrollToId('services')"><a class="nav-link" >Services</a></li>
+          <li class="nav-item" (click)="scrollToId('portfolio')"><a class="nav-link" >Portfolio</a></li>
+          <li class="nav-item" (click)="scrollToId('about')"><a class="nav-link" >About</a></li>
+          <li class="nav-item" (click)="scrollToId('team')"><a class="nav-link" >Team</a></li>
+          <li class="nav-item" (click)="scrollToId('contact')"><a class="nav-link" >Contact</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="row mt-5 pt-5" *ngIf="doctor">
+    <div class="col-4">
+        <div class="card">
+            <img src="{{  '../../../../../assets/user.png'}}" alt="{{doctor.firstName}}"
+                class="card-img-top img-thumbnail">
+            <div class="card-body ">
+                <div>
+                    <strong style="font-size: x-large;">Name :</strong>
+                    <p>{{doctor.firstName | lowercase | titlecase}}</p>
+                </div>
+                <div>
+                    <strong style="font-size: x-large;">Email :</strong>
+                    <p>{{doctor.email }}</p>
+                </div>
+                <div>
+                    <strong style="font-size: x-large;">Specialization :</strong>
+                    <p>{{doctor.specialization | lowercase | titlecase}}</p>
+                </div>
+                <div>
+                    <strong style="font-size: x-large;">Experience :</strong>
+                    <p>{{doctor.yearsOfExperience }} </p>
+                </div>
+                <div>
+                    <strong style="font-size: x-large;">Qualification :</strong>
+                    <p>{{doctor. qualification }} </p>
+                </div>
+                
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success" routerLink="/content-details/{{doctor.email}}">Book Appointment</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-8">
+        <tabset class="member-tabset">
+            <tab heading="About  Dr.{{doctor.id}}" style="font-size: x-large;">
+                <h4  style="font-size: x-large;"> Name</h4>
+                <p>{{doctor.firstName}}</p>
+                <h4 style="font-size: x-large;">Email</h4>
+                <p>{{doctor.email}}</p>
+            </tab>
+            <tab heading="Interests" style="font-size: x-large;">
+                <h4 style="font-size: x-large;"> Specialization</h4>
+                <p>{{doctor.specialization}}</p>
+            </tab>
+            <tab heading="Photos" style="font-size: x-large;">
+                photos
+                
+                <ngx-gallery [options]="galleryOptions" [images]="galleryImages " class="ngx-gallery">
+
+                </ngx-gallery>
+            </tab>
+            <tab heading="Messages" style="font-size: x-large;">
+                
+                <p style="font-size: x-large;">Messages</p>
+            </tab>
+        </tabset>
+    </div>
+</div>

@@ -1,0 +1,167 @@
+<!-- <p>bookapp works!</p>
+<h3>{{doctor.firstName}}</h3>
+
+<div></div> 
+<div class="banner3">
+    <div class="py-5 banner" style="background-image:url(https://therichpost.com/wp-content/uploads/2023/01/banner-bg-book.jpg);">
+      <div class="container">
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+              <div class="col-md-7 col-lg-5">
+              <h3 class="my-3 text-white font-weight-medium text-uppercase">Book Appointment</h3>
+              <div class="bg-white">
+                  <div class="form-row border-bottom">
+                  <div class="p-4 left border-right w-50">
+                      <label class="text-inverse font-12 text-uppercase">Name<span class="text-danger">*</span></label>
+                      <input type="text" class="border-0 p-0 font-14 form-control" placeholder="Your Name" formControlName="patientName"  [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+                      <div *ngIf="submitted && f.fname.errors" class="invalid-feedback mb">
+                          <div *ngIf="f.fname.errors.required"> name is required.</div>
+                       </div>
+                  </div>
+                  <div class="p-4 right w-50">
+                      <label class="text-inverse font-12 text-uppercase">Age<span class="text-danger">*</span></label>
+                      <input type="text" class="border-0 p-0 font-14 form-control" placeholder="Age" formControlName="age"  [ngClass]="{ 'is-invalid': submitted && f.fname.errors }"  />
+                      <div *ngIf="submitted && f.lname.errors" class="invalid-feedback mb">
+                          <div *ngIf="f.lname.errors.required">Age required.</div>
+                       </div>
+                  </div>
+                  </div>
+                  <div class="form-row border-bottom p-4">
+                  <label class="text-inverse font-12 text-uppercase">Email Address<span class="text-danger">*</span></label>
+                  <input type="text" class="border-0 p-0 font-14 form-control" placeholder="Enter your Email Address" formControlName="email"  [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback mb">
+                      <div *ngIf="f.email.errors.required">Email is required.</div>
+                   </div>
+                  </div>
+                  <div class="form-row border-bottom p-4">
+                  <label class="text-inverse font-12 text-uppercase">Phone Number<span class="text-danger">*</span></label>
+                  <input type="text" class="border-0 p-0 font-14 form-control" placeholder="Enter your Phone Number" formControlName="phone"  [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                  <div *ngIf="submitted && f.phone.errors" class="invalid-feedback mb">
+                      <div *ngIf="f.phone.errors.required">Phone is required.</div>
+                   </div>
+                  </div>
+                  <div class="form-row border-bottom p-4 position-relative">
+                  <label class="text-inverse font-12 text-uppercase">Booking Date<span class="text-danger">*</span></label>
+                  <div class="input-group date">
+                      <input type="date" class="border-0 p-0 font-14 form-control" id="dp" placeholder="Select the Appointment Date" formControlName="appointmentSchedule"  [ngClass]="{ 'is-invalid': submitted && f.date.errors }" />
+                      <div *ngIf="submitted && f.date.errors" class="invalid-feedback mb">
+                          <div *ngIf="f.date.errors.required">Date is required.</div>
+                       </div>
+                  </div>
+                  </div>
+                  <div class="form-row border-bottom p-4">
+                  <label class="text-inverse font-12 text-uppercase">Message<span class="text-danger">*</span></label>
+                  <textarea col="1" row="1" class="border-0 p-0 font-weight-light font-14 form-control" placeholder="Write Down the Message" formControlName="message"  [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+                  <div *ngIf="submitted && f.message.errors" class="invalid-feedback mb">
+                      <div *ngIf="f.message.errors.required">Message is required.</div>
+                   </div>
+                  </div>
+                  <div>
+                  <button type="submit" class="w-100 m-0 border-0 py-4 font-14 font-weight-medium btn btn-danger-gradiant btn-block position-relative rounded-0 text-center text-white text-uppercase">
+                                          <span>Book Your Appointment Now</span>
+                                  </button>
+                  </div>
+              </div>
+              </div>
+          </div>
+          </form>
+      </div>
+    </div>
+  </div> -->
+
+<!-- <div class="container">
+    <h2>NgModel Form</h2>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="datetime">Datetime:</label>
+        <input type="datetime-local" class="form-control" [(ngModel)]="appointmentSchedule" name="appointmentSchedule" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="diseases">Diseases:</label>
+        <input type="text" class="form-control" [(ngModel)]="diseaseDescription" name="diseaseDescription" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+   -->
+
+<div class="container">
+  <section class="div">
+    <div class="container py-3 ">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <!-- <div class="col-md-4 col-lg-5 d-none d-md-block">
+                <img src="../../assets/images/registerr-image.jpg" alt="login form" class="img-fluid"
+                  style="border-radius: 1rem 0 0 1rem; height: 710px; width: 1800px;" />
+              </div> -->
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+
+
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    
+                    <span class="h1 fw-bold mb-0" style="color: rgb(7, 7, 35);">Please fill the details to book Appointment</span>
+                  </div>
+                  <br>
+
+                  <form [formGroup]="bookappointment" (ngSubmit)="AddNewUser()">
+
+                    <div class="form-outline mb-4 form-group">
+                      <input type="text" class="form-control form-control-lg" required placeholder="Patient Name"
+                        id="name" name="name" formControlName="patientName" />
+                    </div>
+
+
+
+                    <div class="form-outline mb-4 form-group">
+                      <input type="email" class="form-control form-control-lg" placeholder="Patient Email" name="email"
+                        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+                        formControlName="patientEmail" />
+                    </div>
+
+                    <div class="form-outline mb-4 form-group">
+                      <input type="age" class="form-control form-control-lg" placeholder="Age" name="age" required
+                        formControlName="age" />
+                    </div>
+
+                    <div class="form-outline mb-4 form-group">
+                      <select class="form-control form-control-lg" name="gender" formControlName="gender" required
+                        placeholder="Select Gender">
+                        <option value="" disabled selected hidden>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+
+                    <div class="form-outline mb-4 form-group">
+                      <input type="text" class="form-control form-control-lg" required placeholder="Problem"
+                        id="problem" name="problem" formControlName="problem" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="date" class="form-control form-control-lg" placeholder="Slot" name="slot" required
+                        formControlName="slot" />
+                    </div>
+
+                    <div class="pt-3 mb-9">
+                      <button class="btn btn-dark btn-lg btn-block" type="submit">Register</button>
+
+                    </div>
+                    <br>
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

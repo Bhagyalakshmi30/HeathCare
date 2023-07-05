@@ -1,0 +1,117 @@
+
+
+ 
+   
+    <nav class="navbar navbar-expand-lg navbar fixed-top mb-3" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#page-top"><img src="../../assets/Images/logo.png" alt="..." /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <button (click)="LogOut()" class="btn btn-outline-primary btn-lg">Logout</button>
+            </li>
+            <!-- <li class="nav-item" (click)="scrollToId('services')"><a class="nav-link" >Services</a></li>
+            <li class="nav-item" (click)="scrollToId('portfolio')"><a class="nav-link" >Portfolio</a></li>
+            <li class="nav-item" (click)="scrollToId('about')"><a class="nav-link" >About</a></li>
+            <li class="nav-item" (click)="scrollToId('team')"><a class="nav-link" >Team</a></li>
+            <li class="nav-item" (click)="scrollToId('contact')"><a class="nav-link" >Contact</a></li> --> 
+           </ul>
+        </div>
+      </div>
+    </nav> 
+
+
+    <div class="table_wrap mt-5 pt-5 ">
+      <h2 class="text-center mb-5" style="font-size:30 px ; color:rgb(8, 8, 74)">Doctors Available</h2>
+      <h3 class="text-center mb-5">Trained and Qualified Doctors at Service</h3>
+      <h4 class="text-center mb-5">Please select doctor with whom you would like to book an appointment.</h4>
+      <div class="row justify-content-center g-2">
+        <div class="col-12 col-md-6 col-lg-3" *ngFor="let doctor of doctors">
+          <div class="card mb-4 me-4 ms-2" style="max-width: 400px;">
+            <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+              <img src="../../assets/Images/doctors/doctor-01.jpg" alt="" class="div" style="width: 150px; height: 150px; object-fit: cover;">
+            </div>
+            <div class="card-body  border-dark text-center" style="font-size: x-large;">
+              <h5 class="card-title" style="font-size: xx-large;"><i class="fa fa-stethoscope"></i> Dr :{{doctor.firstName}} {{doctor.lastName}}</h5>
+              <div class="text-start">
+                <p class="fw-bold mb-1 ms-1" style="color: rgb(1, 1, 26);;"> Specialization: {{doctor.specialization}}</p>
+                <p class="mb-2"></p>
+                <p class="text-center"><button class="btn btn-success" routerLink="/content/{{doctor.email}}"><i class="fa fa-stethoscope"></i>View Profile</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+
+    <!-- <div class="table_wrap pt-5 mt-5">
+      <h2 class="text-center" style="font-size: xx-large;">Doctor Details</h2>
+      <div class="col justify-content-center g-2">
+        <div class="row">
+          <div class="card-group">
+            <div class="card" *ngFor="let doctor of doctors; let i = index">
+              <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                <img src="../../assets/user.png" alt="" class="div" style="width: 50%; height: 90%; object-fit: cover;">
+              </div>
+              <div class="card-body border-dark text-center" style="font-size: x-large;">
+                <h5 class="card-title" style="font-size: xx-large;">{{doctor.firstname}} {{doctor.lastName}}</h5>
+                <div class="text-start">
+                  <p class="fw-bold mb-1" style="color: rgb(1, 1, 26);"><strong>Email:</strong></p>
+                  <p class="mb-2">{{doctor.email}}</p>
+                  <p class="fw-bold mb-1" style="color: rgb(1, 1, 26);"><strong>Gender:</strong></p>
+                  <p class="mb-2">{{doctor.gender}}</p>
+                  <p class="fw-bold mb-1" style="color: rgb(1, 1, 26);"><strong>Qualification:</strong></p>
+                  <p class="mb-2">{{doctor.qualification}}</p>
+                  <p class="fw-bold mb-1" style="color: rgb(1, 1, 26);"><strong>Specialization:</strong></p>
+                  <p class="mb-2">{{doctor.specialization}}</p>
+                  <p class="fw-bold mb-1" style="color: rgb(1, 1, 26);"><strong>Experience:</strong></p>
+                  <p class="mb-2">{{doctor.yearsOfExperience}}</p>
+                  <button class="btn btn-success" routerLink="/content/{{doctor.email}}">View Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     -->
+
+  <!-- <div class="card mb-4" *ngIf="let doctor of doctors">
+    <div class="card-img-wrapper">
+        <img src="../../assets/Images/doctors/doctor-01.jpg" alt="{{doctor.}} {{doctor.lastName}}" class="card-img-top">
+        <ul class="list-inline member-icons animate text-center">
+            <li class="list-inline-item">
+                <button class="btn btn-primary" routerLink="/doctor/{{doctor.email}}">
+                    <i class="fa fa-user"></i>
+                </button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary">
+                    <i class="fa fa-heart"></i>
+                </button>
+            </li>
+            <li class="list-inline-item">
+                <button class="btn btn-primary">
+                    <i class="fa fa-envelope"></i>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body p-1">
+        <h6 class="card-title text-center mb-1">
+            <i class="fa fa-user me-2"></i>
+                {{member.knownAs}},{{member.age}}
+            
+        </h6>
+        <p class="card-text text-muted text-center">{{member.city}}</p>
+    </div>
+</div> -->
+   
